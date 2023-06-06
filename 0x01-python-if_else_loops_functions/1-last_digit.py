@@ -9,10 +9,10 @@ if number < 0:
 
 if lastDigit > 5:
     str = "and is greater than 5"
-elif lastDigit < 6:
-    str = "and is less than 6 and not 0"
 elif lastDigit == 0:
     str = "and is 0"
+elif lastDigit < 6:
+    str = "and is less than 6 and not 0"
 else:
     str = "and is 0"
 
