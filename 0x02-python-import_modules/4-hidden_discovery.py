@@ -2,7 +2,8 @@
 import hidden_4 as hidden
 
 if __name__ != "__main__":
+    exit()
 
-    for name in sorted(hidden):
-        if name[0:2] != "__":
-            print(name)
+for name in sorted(hidden):
+    if name[0:2] != "__":
+        print(name)
