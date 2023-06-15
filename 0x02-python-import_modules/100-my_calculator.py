@@ -3,6 +3,7 @@
 import sys
 from calculator_1 import add, sub, mul, div
 
+
 def calculate_expression(a, operator, b):
     if operator == '+':
         return add(a, b)
@@ -14,6 +15,7 @@ def calculate_expression(a, operator, b):
         return div(a, b)
     else:
         return None
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
