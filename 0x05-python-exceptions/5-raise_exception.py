@@ -8,4 +8,3 @@ def raise_exception():
         TypeError: Always raises a TypeError with the message "Error Occurred".
     """
     raise TypeError("Error Occurred")
-
