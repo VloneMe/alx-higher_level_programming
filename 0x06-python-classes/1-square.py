@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ 1. Square with size """
 
+
 class Square:
     """ Class representing a square.
 
