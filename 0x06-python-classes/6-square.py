@@ -70,7 +70,7 @@ class Square:
             value (tuple): The position value to set.
 
         Raises:
-            TypeError: If value is not a tuple or has incorrect length or contains non-integer elements.
+            TypeError: Not a tuple or incorrect length or non-integer.
             ValueError: If any element of the tuple is less than 0.
         """
         if (not isinstance(value, tuple) or
