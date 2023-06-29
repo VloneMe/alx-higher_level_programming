@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 def safe_function(fct, *args):
     """
     This executes a function safely with the given arguments.
@@ -7,7 +10,7 @@ def safe_function(fct, *args):
         *args: Variable number of arguments to pass to the function.
 
     Returns:
-        The result of the function if it executes successfully, or None if an exception occurs.
+        The result of the function.
     """
     try:
         result = fct(*args)
