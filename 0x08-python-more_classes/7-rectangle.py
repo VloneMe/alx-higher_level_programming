@@ -121,7 +121,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        Print a message when an instance of Rectangle is deleted 
+        Print a message when an instance of Rectangle is deleted
         and decrement the number_of_instances attribute.
         """
 
