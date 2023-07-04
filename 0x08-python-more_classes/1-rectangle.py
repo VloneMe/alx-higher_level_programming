@@ -23,36 +23,9 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is less than 0.
         """
-        self.width = width
-        self.height = height
 
-    @property
-    def width(self):
-        """
-        Getter method for retrieving the width of the rectangle.
-
-        Returns:
-            int: The width of the rectangle.
-        """
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """
-        Setter method for setting the width of the rectangle.
-
-        Args:
-            value (int): The width of the rectangle.
-
-        Raises:
-            TypeError: If width is not an integer.
-            ValueError: If width is less than 0.
-        """
-        if not isinstance(value, int):
-            raise TypeError("Width must be an integer")
-        if value < 0:
-            raise ValueError("Width must be >= 0")
-        self.__width = value
+        self.__height = height
+        self.__width = width
 
     @property
     def height(self):
@@ -76,26 +49,40 @@ class Rectangle:
             TypeError: If height is not an integer.
             ValueError: If height is less than 0.
         """
-        if not isinstance(value, int):
-            raise TypeError("Height must be an integer")
-        if value < 0:
-            raise ValueError("Height must be >= 0")
-        self.__height = value
 
-    def area(self):
-        """
-        Calculates the area of the rectangle.
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
 
-        Returns:
-            int: The area of the rectangle.
+    @property
+    def width(self):
         """
-        return self.__width * self.__height
-
-    def perimeter(self):
-        """
-        Calculates the perimeter of the rectangle.
+        Getter method for retrieving the width of the rectangle.
 
         Returns:
-            int: The perimeter of the rectangle.
+            int: The width of the rectangle.
         """
-        return 2 * (self.__width + self.__height)
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """
+        Setter method for setting the width of the rectangle.
+
+        Args:
+            value (int): The width of the rectangle.
+
+        Raises:
+            TypeError: If width is not an integer.
+            ValueError: If width is less than 0.
+        """
+
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
