@@ -11,8 +11,10 @@ def append_after(filename="", search_string="", new_string=""):
 
     Args:
         filename (str): The name of the file.
-        search_string (str): The string to search for within each line of the file.
-        new_string (str): The string to insert after each line containing the search string.
+        search_string (str): The string to search
+        for within each line of the file.
+        new_string (str): The string to insert after
+        each line containing the search string.
     """
     text = ""
     with open(filename) as file:
