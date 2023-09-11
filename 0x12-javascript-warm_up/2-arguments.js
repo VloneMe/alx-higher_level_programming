@@ -2,9 +2,9 @@
 
 // The script that prints a message depending of the number of arguments passed.
 
-const myVar = process.argv[2];
+const myVar = process.argv.length - 2;
 
-if (myVar === undefined){
+if (myVar === 0){
 	console.log('No argument');
 } else if ( myVar === 1){
 	console.log('Argument found');
