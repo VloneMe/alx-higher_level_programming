@@ -2,13 +2,9 @@
 
 // The script that prints the addition of 2 integers.
 
-function factorial (n) {
-  if ((isNaN(n)) || (n === 1)) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
+function add (a, b) {
+  return parseInt(a) + parseInt(b);
 }
 
-const passVar = factorial(parseInt(process.argv[2]));
+const passVar = add(process.argv[2], process.argv[3]);
 console.log(passVar);
