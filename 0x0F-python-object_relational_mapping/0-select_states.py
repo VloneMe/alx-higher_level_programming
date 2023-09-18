@@ -17,7 +17,12 @@ if __name__ == "__main__":
     """
     MySQL Connection
     """
-    db = MySQLdb.connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
+    db = MySQLdb.connect(
+            host="localhost",
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3]
+            )
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
