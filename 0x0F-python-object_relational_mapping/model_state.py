@@ -8,6 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 _metadata = MetaData()
 Base = declarative_base(metadata=_metadata)
 
+
 class State(Base):
     """
     Table states
