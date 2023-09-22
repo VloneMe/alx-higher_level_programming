@@ -12,7 +12,7 @@ class City(Base):
     """
     Data base operation
     """
-    
+
     __tablename__ = "cities"
 
     id = Column(Integer, primary_key=True)
