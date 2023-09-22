@@ -24,5 +24,5 @@ if __name__ == "__main__":
     newState = 'California'
     newCity = 'San Francisco'
 
-    session.add(City(name=newCity, state=State(name=newState)))
+    session.add(City(name=newCity,states= State(name=newState)))
     session.commit()
