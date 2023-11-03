@@ -1,8 +1,8 @@
 #!/usr/bin/node
-// reads and prints the content of a file.
+// A script that reads and prints the content of a file.
 
 const file = process.argv[2];
-const fs = require('fs'); // Changed from fileStream to fs for clarity
+const fs = require('fs');
 
 fs.readFile(file, 'utf-8', (error, data) => {
   if (error) {
