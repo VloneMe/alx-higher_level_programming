@@ -1,43 +1,17 @@
 #!/usr/bin/node
 // A script that prints all characters of a Star Wars movie:
 
-const request = require('request');
-const movieId = process.argv[2];
-const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+const apiUrl = 'https://swapi-api.alx-tools.com/api/films/';
+const file = process.argv[3];
+const req = require('request');
+const fs = require('fs');
 
-if (!movieId) {
-  console.error('Please provide the Movie ID as a command line argument');
-  process.exit(1);
-}
-
-request(apiUrl, function (error, response, body) {
+req(apiUrl, function (error, response, body) {
   if (error) {
-    console.error('Error:', error);
-  } else if (response.statusCode !== 200) {
-    console.error('Request failed with status code:', response.statusCode);
+    console.log(error);
   } else {
-    const movieData = JSON.parse(body);
-    console.log(`Characters in ${movieData.title}:`);
-
-    const characterUrls = movieData.characters;
-
-    function fetchCharacter (index) {
-      if (index < characterUrls.length) {
-        request(characterUrls[index], function (error, response, body) {
-          if (error) {
-            console.error('Error fetching character:', error);
-          } else if (response.statusCode !== 200) {
-            console.error('Request failed with status code:', response.statusCode);
-          } else {
-            const characterData = JSON.parse(body);
-            console.log(characterData.name);
-          }
-
-          fetchCharacter(index + 1);
-        });
-      }
-    }
-
-    fetchCharacter(0);
+    fs.writeFile(file, body, 'utf-8', (error) => {
+      if (error) console.log(error);
+    });
   }
 });
