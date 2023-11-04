@@ -9,5 +9,6 @@ $(document).ready(function() {
             const liElement = $("<li>").text(movie.title);
             ulElement.append(liElement);
         });
+        
     });
-}
+});
